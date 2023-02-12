@@ -1,8 +1,145 @@
+/* Globales */
+
+:root {
+  --color-enlaces: #00B7FF;
+}
+
+html {
+  font-size: 16px;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: var(--color-enlaces);
 }
+
+/* Index */
+
+#index-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/cinema.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-end; */
+  display: grid;
+  grid-template-columns: 1fr .7fr;
+  grid-template-rows: 1fr 1fr;
+
+}
+
+#index-title {
+  color: white;
+  font-size: 8rem;
+  width: 40%;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+#index-button {
+  background-color: white;
+  border: none;
+  padding: 20px 35px;
+  font-size: 1.5rem;
+  color: var(--color-enlaces);
+  border-radius: 35px;
+}
+
+#index-container a {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+/* Movies List */
+
+#movies-title {
+  font-size: 1.5rem;
+  padding-top: 50px;
+  padding-left: 100px;
+  margin: 0;
+}
+
+#movies-subtitle {
+  font-size: 1.1rem;
+  padding-left: 100px;
+  margin: 20px 0 50px 0;
+}
+
+#all-movies-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 150px;
+}
+
+#each-movie-div{
+  margin: 0 80px 60px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#movie-img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+#each-movie-title {
+  font-weight: bold;
+}
+
+/* movie info */
+
+#movie-info-container {
+  display: flex;
+  gap: 60px;
+}
+
+#movie-info-img {
+  padding: 50px;
+}
+
+#movie-info-img img {
+  width: 250px;
+}
+
+#movie-info-data {
+  padding-top: 30px;
+  max-width: 700px;
+}
+
+#movie-info-data h3 {
+  font-size: 1.5rem;
+}
+
+#movie-info-data h4 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+#movie-info-data h5 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#stars-data {
+  padding: 15px;
+}
+#stars-data li {
+  padding-left: 15px;
+}
+
+#showtime-data {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+}
+
